@@ -1,0 +1,335 @@
+/* Base Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    height: 100%;
+    overflow: auto;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #333;
+}
+
+/* Section Layout */
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+section {
+    width: 100%;
+    text-align: center;
+}
+
+h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #444;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 5px;
+    color: #555;
+}
+
+/* Matrix Inputs */
+.matrix-setup-controls {    
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Matrix Inputs */
+.matrix-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0px;
+}
+
+.matrix-row {
+    display: flex;
+    gap: 10px;
+}
+
+.matrix-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    text-align: center;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    width: 60px; 
+}
+
+.matrix-input:focus {
+    outline: none;
+    border-color: #007BFF;
+    background-color: #e6f7ff;
+}
+
+.matrix-input:hover {
+    border-color: #007BFF;
+    background-color: #f0f8ff;
+}
+
+/* Result Section */
+.matrix-result {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); /* Flexible column width */
+    max-width: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.matrix-cell {
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+/* Hover effect for matrix cells */
+.matrix-cell:hover {
+    background-color: #e2f7e2;
+    border-color: #4CAF50;
+    cursor: pointer;
+}
+
+/* Inputs */
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Buttons */
+button {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Tùy chỉnh phần select */
+#operation {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: #333;
+    width: 200px;
+}
+
+/* Tùy chỉnh phần option */
+#operation option {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Thay đổi màu nền khi chọn option */
+#operation option:checked {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Thêm một chút khoảng cách giữa select và button */
+#operation-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+/* Tùy chỉnh container chính của matrix-setup */
+#matrix-setup {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Tùy chỉnh container của các ma trận A và B */
+#matrix-a-container, #matrix-b-container {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Tiêu đề của ma trận */
+#matrix-a-container h3, #matrix-b-container h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Tùy chỉnh các điều khiển nhập số hàng và cột */
+.matrix-setup-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Tùy chỉnh label và input cho các hàng và cột */
+.matrix-setup-controls label {
+    font-size: 16px;
+    color: #555;
+}
+
+.matrix-setup-controls input {
+    font-size: 16px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Khi hover vào input, đổi màu viền */
+.matrix-setup-controls input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Tùy chỉnh nút bấm */
+#generate-matrix-inputs {
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* Hiệu ứng hover cho nút bấm */
+#generate-matrix-inputs:hover {
+    background-color: #45a049;
+}
+
+/* Hiệu ứng cho phần tử khi matrix B chưa hiển thị */
+#matrix-b-container {
+    display: none;
+}
+
+/* Tùy chỉnh khoảng cách giữa các phần tử */
+#matrix-setup > div {
+    margin-bottom: 20px;
+}
+
+/* Container chính của phần hiển thị kết quả */
+#result-section {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+/* Tiêu đề phần kết quả */
+#result-section h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Cấu hình lưới hiển thị kết quả */
+.matrix-result {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    border-collapse: collapse;
+    padding: 10px;
+    margin-top: 10px;
+    max-width: 100%; 
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+/* Tùy chỉnh các ô trong ma trận */
+.matrix-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f9;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+/* Thêm hiệu ứng khi hover vào các ô */
+.matrix-cell:hover {
+    background-color: #e2f7e2;
+    border-color: #4CAF50;
+    cursor: pointer;
+}
+
+/* Matrix Containers */
+#matrix-a-container, #matrix-b-container {
+    margin-top: 20px;
+}
+
+/* Hidden Sections */
+#matrix-setup, #matrix-b-container, #calculate-section {
+    display: none;
+}

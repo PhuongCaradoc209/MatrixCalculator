@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Matrix Calculator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header"><p>Matrix Calculator</p></div>
+
+        <!-- Operation Selection -->
+        <div class="body">
+            <section id="operation-selection">
+                <label for="operation">Select Operation:</label>
+                <select id="operation">
+                    <option value="add">Addition</option>
+                    <option value="subtract">Subtraction</option>
+                    <option value="multiply">Multiplication</option>
+                    <option value="transpose">Transpose</option>
+                    <option value="determinant">Determinant</option>
+                    <option value="inverse">Inverse</option>
+                </select>
+                <button id="setup-operation">Setup</button>
+            </section>
+    
+            <!-- Matrix Input Setup -->
+            <section id="matrix-setup" style="display: none;">
+                <!-- Matrix A -->
+                <div id="matrix-a-container">
+                    <h3>Matrix A</h3>
+                    <div class="matrix-setup-controls">
+                        <label for="matrix-a-rows">Rows:</label>
+                        <input type="number" id="matrix-a-rows" min="1">
+                        <label for="matrix-a-cols">Columns:</label>
+                        <input type="number" id="matrix-a-cols" min="1">
+                    </div>
+                    <div id="matrix-a-inputs" class="matrix-inputs"></div>
+                </div>
+    
+                <!-- Matrix B -->
+                <div id="matrix-b-container" style="display: none;">
+                    <h3>Matrix B</h3>
+                    <div class="matrix-setup-controls">
+                        <label for="matrix-b-rows">Rows:</label>
+                        <input type="number" id="matrix-b-rows" min="1">
+                        <label for="matrix-b-cols">Columns:</label>
+                        <input type="number" id="matrix-b-cols" min="1">
+                    </div>
+                    <div id="matrix-b-inputs" class="matrix-inputs"></div>
+                </div>
+    
+                <!-- Generate Inputs -->
+                <button id="generate-matrix-inputs">Generate Matrix Inputs</button>
+            </section>
+    
+            <!-- Calculation Section -->
+            <section id="calculate-section" style="display: none;">
+                <button id="calculate-matrix">Calculate</button>
+            </section>
+    
+            <!-- Result Display -->
+            <section id="result-section">
+                <h3>Result</h3>
+                <div id="result-output" class="matrix-result"></div>
+            </section>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
